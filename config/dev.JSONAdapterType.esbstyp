@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<serviceType xmlns="http://www.sonicsw.com/sonicxq" name="dev.JSONAdapter" factoryClass="com.progress.codeshare.esbservice.json.JSONAdapter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sonicsw.com/sonicxq file%3A%2F%2F%2FC%3A%2FProgress%2FRBI%2FSonic%2FESB8.0%2Fschema%2FserviceType.xsd">
+	<validParams>
+		<runtime>
+		    <stringParam name="transformationType"></stringParam>
+		    <stringParam name="messagePart"></stringParam>
+		</runtime>
+	</validParams>	
+	<classLoading>
+	    <serviceType>
+	        <classpath_list>
+	            <classpath>sonicfs:///workspace/JSON Adapter/lib/JSONAdapter.jar</classpath>
+	        </classpath_list>
+	    </serviceType>
+	</classLoading>
+</serviceType>

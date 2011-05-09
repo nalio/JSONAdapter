@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sid xmlns="http://www.sonicsw.com/sonicesb/sid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<service>
+		<properties>
+			<name>dev.JSONAdapter</name>
+			<type>Java</type>			
+			<namespace>http://www.sonicsw.com/sonicesb/sid</namespace>
+		</properties>
+
+		<interface name="Default">
+			<operation name="Default">
+				<input name="Input">
+					<part binding-info="name" binding-name="Part" name="DefaultInput" namespace="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+				</input>
+				<output name="Output">
+					<part binding-info="name" binding-name="Part" name="DefaultOutput" namespace="http://www.w3.org/2001/XMLSchema" type="xsd:anyType"/>
+				</output>
+			</operation>
+		</interface>
+	</service>
+<scenarios xmlns="http://sonic.esb.org/scenario/"/>
+<service-instances>
+<service-instance default="true" name="dev.JSONAdapter">
+<container>dev_ESBCore</container>
+<wsdl-url/>
+<endpoints>
+<entry-endpoint name="dev.JSONAdapter.Entry" type="ENDPOINT"/>
+<exit-endpoints>
+<exit-endpoint name="REPLY_TO" type="REPLY_TO"/>
+</exit-endpoints>
+<fault-endpoint name="REPLY_TO" type="REPLY_TO"/>
+<rejected-endpoint name="dev.RME" type="ENDPOINT"/>
+</endpoints>
+<parameters/>
+</service-instance>
+</service-instances>
+</sid>
